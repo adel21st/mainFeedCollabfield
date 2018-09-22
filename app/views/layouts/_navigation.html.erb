@@ -4,9 +4,9 @@
          <a class="navbar-brand" href="#">
             <span class="logo-default">
                <%= link_to home_index_path do %>
-               <%= content_tag :h2, "2 Fantastique", :class => "text-white" %>
+               <%= content_tag :h2, "2F | ", :class => "text-white" %>
                <% end %>
-            </span>
+            </span>    
          </a>
          <button class="navbar-toggler p-0" data-toggle="collapse" data-target="#navbarNav">
             <div class="hamburger hamburger--spin js-hamburger">
@@ -15,31 +15,33 @@
                </div>
             </div>
          </button>
-         <div class="collapse navbar-collapse" id="navbarNav">
+         <div class="collapse navbar-collapse px-md-0" id="navbarNav">
+                  <%= link_to 'MON COMPTE', home_index_path, class: "nav-link" %>
             <ul class="navbar-nav ml-auto">
                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Choisir un corps de métiers 
-                     <i class="fa fa-chevron-down u-fs-12 ml-1"></i>
-                  </a>
-                  <div class="dropdown-menu box-shadow-v2" aria-labelledby="navbarDropdown">
-                     <a class="dropdown-item" href="https://devdap.com/themes-preview/live/devdap/LandingPages/app/index.html">Electricien</a>
-                     <a class="dropdown-item" href="https://devdap.com/themes-preview/live/devdap/LandingPages/software/index.html">Chauffagiste</a>
-                     <a class="dropdown-item" href="https://devdap.com/themes-preview/live/devdap/LandingPages/seo/index.html">Plombier</a>
-                     <a class="dropdown-item" href="https://devdap.com/themes-preview/live/devdap/LandingPages/admin/index.html">Serrurier</a>
-                  </div>
-               </li>
-               <li class="nav-item active">
-                  <form class="form-inline my-2 my-lg-0">
-                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><%= octicon "search" %></button>
-                  </form>
-               </li>
-               <li class="nav-item active">
-                  <%= link_to 'Mon compte', home_index_path, class: "nav-link" %>
-               </li>
-            </ul>
-         </div>
-      </nav>
-   </div>
+                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Choisir un corps de métiers 
+                  <i class="fa fa-chevron-down u-fs-12 ml-1"></i>
+               </a>
+               <div class="dropdown-menu box-shadow-v2" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="">Electricien</a>
+                  <a class="dropdown-item" href="">Chauffagiste</a>
+                  <a class="dropdown-item" href="">Plombier</a>
+                  <a class="dropdown-item" href="">Serrurier</a>
+               </div>
+            </li>
+            <li class="nav-item">
+               <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Entrez votre adresse" aria-label="Search">
+                  <button type=button class=btn btn-primary start id=monBouton data-loading-text=Chargement...>
+                     <span><i class="material-icons">search</i></span>
+                  </button>
+               </form>
+            </li>
+
+         </ul>
+      </div>
+   </nav>
+</div>
 </header>
+
